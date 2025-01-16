@@ -295,6 +295,8 @@ aside ul li a span {
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 @media (max-width: 767px) {
   .wrapper .welcome .body {
@@ -495,4 +497,554 @@ aside ul li a span {
 .green .progress {
   background-color: rgb(34 179 94 / 20%);
   color: var(--green-color);
+}
+
+/* Tickets */
+.wrapper .tickets {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.tickets h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.tickets p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--grey-color);
+  font-size: 15px;
+}
+.tickets .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+.tickets .cards .card {
+  padding: 20px;
+  width: calc(50% - 10px);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .tickets .cards .card {
+    width: calc(100% - 10px);
+  }
+}
+.tickets .cards .card i {
+  margin-bottom: 10px;
+}
+.tickets .cards .card i.orange {
+  color: var(--orange-color);
+}
+.tickets .cards .card i.blue {
+  color: var(--blue-color);
+}
+.tickets .cards .card i.green {
+  color: var(--green-color);
+}
+.tickets .cards .card i.red {
+  color: var(--red-color);
+}
+.tickets .cards .card span {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.tickets .cards .card p {
+  display: block;
+  color: var(--grey-color);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* News */
+.wrapper .news {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.news h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.news .card {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .news .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.news .card:not(:last-child) {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.news .card img {
+  width: 100px;
+  border-radius: 6px;
+}
+.news .card .info {
+  flex: 1;
+  margin-left: 15px;
+}
+@media (max-width: 767px) {
+  .news .card .info {
+    margin: 10px 0;
+  }
+}
+.news .card .info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.news .card .info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+.news .card span {
+  background-color: #eee;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Tasks */
+.wrapper .tasks {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.tasks h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.tasks .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tasks .card:not(:last-child) {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.tasks .card .info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.tasks .card .info p {
+  margin: 0;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.tasks .card i {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.tasks .card i:hover {
+  color: var(--red-color);
+}
+.tasks .card.done {
+  opacity: 0.3;
+}
+.tasks .card.done .info h3,
+.tasks .card.done .info p {
+  text-decoration: line-through;
+}
+
+/* Search */
+.wrapper .search {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.search h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.search .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.search .card:first-of-type {
+  color: var(--grey-color);
+  padding: 0 0 10px;
+}
+.search .card p {
+  margin: 0;
+}
+.search .card:not(:first-of-type) p {
+  font-weight: bold;
+}
+.search .card:not(:first-of-type) span {
+  background-color: #eee;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Uploads */
+.wrapper .uploads {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.uploads h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.uploads .card {
+  display: flex;
+  align-items: center;
+}
+.uploads .card:not(:last-child) {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.uploads .card img {
+  width: 40px;
+}
+.uploads .card .info {
+  flex: 1;
+  margin-left: 10px;
+}
+.uploads .card .info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.uploads .card .info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+.uploads .card span {
+  background-color: #eee;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Last Projec */
+.wrapper .last-project {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.last-project h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.last-project .progress {
+  position: relative;
+}
+.last-project .progress::before {
+  content: "";
+  background-color: var(--blue-color);
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 11px;
+}
+.last-project .progress p {
+  font-weight: bold;
+  padding-left: 35px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  position: relative;
+}
+.last-project .progress p::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid white;
+  outline: 2px solid var(--blue-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.last-project .progress p.done::before {
+  background-color: var(--blue-color);
+}
+.last-project .progress p.in-progress::before {
+  animation: in-progress 0.8s infinite alternate;
+}
+@keyframes in-progress {
+  0% {
+    background-color: var(--blue-color);
+  }
+  100% {
+    background-color: white;
+  }
+}
+.last-project img {
+  width: 160px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+}
+@media (max-width: 767px) {
+  .last-project img {
+    display: none;
+  }
+}
+
+/* Reminders */
+.wrapper .reminders {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.reminders h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.reminders ul {
+  margin: 0;
+}
+.reminders ul li {
+  margin-top: 15px;
+  margin-left: 30px;
+  padding-left: 15px;
+  position: relative;
+}
+.reminders ul li.blue {
+  border-left: 2px solid var(--blue-color);
+}
+.reminders ul li.green {
+  border-left: 2px solid var(--green-color);
+}
+.reminders ul li.orange {
+  border-left: 2px solid var(--orange-color);
+}
+.reminders ul li.red {
+  border-left: 2px solid var(--red-color);
+}
+.reminders ul li::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reminders ul li.blue::before {
+  background-color: var(--blue-color);
+}
+.reminders ul li.green::before {
+  background-color: var(--green-color);
+}
+.reminders ul li.orange::before {
+  background-color: var(--orange-color);
+}
+.reminders ul li.red::before {
+  background-color: var(--red-color);
+}
+.reminders ul li p {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.reminders ul li span {
+  font-size: 13px;
+  color: var(--grey-color);
+}
+
+/* Post */
+.wrapper .post {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.post h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.post .post-head {
+  display: flex;
+  align-items: center;
+}
+.post .post-head img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.post .post-head h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.post .post-head p {
+  margin: 0;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.post .post-content p {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  line-height: 1.8;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .post .post-content p {
+    text-align: center;
+  }
+}
+.post .post-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--grey-color);
+}
+
+/* Social Media */
+.wrapper .social {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.social h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.social .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29 161 242 / 20%);
+  padding: 15px;
+  padding-left: 70px;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.social .card.twitter {
+  background-color: rgb(29 161 242 / 20%);
+  color: #1da1f2;
+}
+.social .card.facebook {
+  background-color: rgb(24 119 242 / 20%);
+  color: #1da1f2;
+}
+.social .card.youtube {
+  background-color: rgb(255 0 0 / 20%);
+  color: #ff0000;
+}
+.social .card.linkedin {
+  background-color: rgb(0 119 181 / 20%);
+  color: #0077b5;
+}
+.social .card i {
+  width: 52px;
+  height: 100%;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .card a {
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+}
+.social .card.twitter i,
+.social .card.twitter a {
+  background-color: #1da1f2;
+}
+.social .card.facebook i,
+.social .card.facebook a {
+  background-color: #1877f2;
+}
+.social .card.youtube i,
+.social .card.youtube a {
+  background-color: #ff0000;
+}
+.social .card.linkedin i,
+.social .card.linkedin a {
+  background-color: #0077b5;
+}
+
+/* Projects */
+.projects {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.projects h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.projects .responsive-table {
+  overflow-x: scroll;
+}
+.projects table {
+  width: 100%;
+  min-width: 700px;
+  border-spacing: 0;
+  font-size: 15px;
+}
+.projects table thead tr td {
+  padding: 15px;
+  background-color: #eee;
+  font-weight: bold;
+}
+.projects table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.projects table img {
+  width: 32px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: white;
+}
+.projects table img:not(:first-child) {
+  margin-left: -20px;
+}
+.projects table tbody tr td:last-child {
+  border-right: 1px solid #eee;
+}
+.projects table tbody span {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+}
+.projects table tbody span.orange {
+  background-color: var(--orange-color);
+}
+.projects table tbody span.blue {
+  background-color: var(--blue-color);
+}
+.projects table tbody span.green {
+  background-color: var(--green-color);
+}
+.projects table tbody span.red {
+  background-color: var(--red-color);
 }

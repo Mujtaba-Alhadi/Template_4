@@ -63,6 +63,37 @@ ul {
   border-radius: 10px;
 }
 
+.toggle-checkbox {
+  display: none;
+}
+.toggle-switch {
+  background-color: #ccc;
+  width: 50px;
+  height: 24px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-switch::before {
+  content: "";
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4.5px;
+  left: 5px;
+  transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  left: 30px;
+}
+
+/* Main Page */
 .page {
   display: flex;
   background-color: #f1f5f9;
@@ -238,7 +269,7 @@ aside ul li a span {
     gap: 10px;
   }
 }
-
+/* ===== Dashboard Page ===== */
 /* Welcome */
 .wrapper .welcome {
   background-color: white;
@@ -995,6 +1026,12 @@ aside ul li a span {
   background-color: white;
   border-radius: 10px;
 }
+@media (max-width: 767px) {
+  .projects {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .projects h2 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -1008,7 +1045,7 @@ aside ul li a span {
   border-spacing: 0;
   font-size: 15px;
 }
-.projects table thead tr td {
+.projects table thead td {
   padding: 15px;
   background-color: #eee;
   font-weight: bold;
@@ -1017,6 +1054,13 @@ aside ul li a span {
   padding: 15px;
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
+  transition: 0.3s;
+}
+.projects table tbody td:last-child {
+  border-right: 1px solid #eee;
+}
+.projects table tbody tr:hover td {
+  background-color: #faf7fa;
 }
 .projects table img {
   width: 32px;
@@ -1026,9 +1070,6 @@ aside ul li a span {
 }
 .projects table img:not(:first-child) {
   margin-left: -20px;
-}
-.projects table tbody tr td:last-child {
-  border-right: 1px solid #eee;
 }
 .projects table tbody span {
   font-size: 13px;
@@ -1047,4 +1088,329 @@ aside ul li a span {
 }
 .projects table tbody span.red {
   background-color: var(--red-color);
+}
+
+/* ===== Settings Page ===== */
+/* Site Control */
+.wrapper .site-control {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.site-control h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.site-control > p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.site-control .control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.site-control .control p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: var(--grey-color);
+  font-size: 13px;
+}
+.site-control textarea {
+  min-height: 150px;
+  width: 100%;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  caret-color: var(--blue-color);
+}
+
+/* General Info */
+.wrapper .general-info {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.general-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.general-info p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.general-info label {
+  display: block;
+  font-size: 14px;
+  color: var(--grey-color);
+  margin-bottom: 10px;
+}
+.general-info input {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  caret-color: var(--blue-color);
+}
+.general-info input[type="email"] {
+  width: calc(100% - 100px);
+  background-color: #f0f4f8;
+  color: #bbb;
+  margin-right: 10px;
+  margin-bottom: 0;
+  cursor: no-drop;
+}
+.general-info a {
+  background-color: var(--blue-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Security Info */
+.wrapper .security-info {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.security-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.security-info p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.security-info .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.security-info .card:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+.security-info .card p {
+  margin: 5px 0 0;
+  color: var(--grey-color);
+  font-size: 13px;
+}
+.security-info .card:first-of-type a {
+  background-color: #eee;
+  color: black;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.security-info .card:last-of-type a {
+  background-color: var(--blue-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Social Info */
+.wrapper .social-info {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.social-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.social-info p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.social-info .card {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.social-info .card i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  color: var(--grey-color);
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.social-info .card input {
+  width: 100%;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: 0 6px 6px 0;
+  padding-left: 10px;
+}
+.social-info .card:focus-within i {
+  color: black;
+}
+
+/* Widgets Control */
+.wrapper .widgets {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.widgets h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.widgets p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.widgets .control {
+  margin-top: 15px;
+}
+.widgets .control input {
+  display: none;
+}
+.widgets .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.widgets .control label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+.widgets .control label::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  background-color: var(--blue-color);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+.widgets .control input:checked + label::after {
+  transform: scale(1);
+}
+
+/* Backup Manager */
+.wrapper .backup {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.backup h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.backup p {
+  color: var(--grey-color);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+.backup .control {
+  margin-top: 15px;
+}
+.backup .control input {
+  display: none;
+}
+.backup .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.backup .control label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.backup .control label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.backup .control input:checked + label::after {
+  transform: scale(1);
+}
+.backup .control input:checked + label::before {
+  border-color: var(--blue-color);
+}
+.backup .servers {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .backup .servers {
+    flex-wrap: wrap;
+  }
+}
+.backup .servers input {
+  display: none;
+}
+.backup .servers .server {
+  width: 100%;
+  margin: 10px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.backup .servers .server label {
+  display: block;
+  cursor: pointer;
+  padding: 15px;
+}
+.backup .servers .server label i {
+  display: block;
+  margin-bottom: 10px;
+}
+.backup .servers input:checked + .server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
 }

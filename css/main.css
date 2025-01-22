@@ -1561,6 +1561,11 @@ aside ul li a span {
   background-color: white;
   border-radius: 10px;
 }
+@media (max-width: 767px) {
+  .profile-page .other-data .activities {
+    margin-top: 0;
+  }
+}
 .other-data .activities h2 {
   margin: 0 0 10px;
 }
@@ -1609,3 +1614,96 @@ aside ul li a span {
 .other-data .activities .card span {
   color: var(--grey-color);
 }
+
+/* ===== Projects Page ===== */
+.wrapper .projects-page {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.projects-page .pro-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.projects-page .pro-head h2 {
+  margin: 0;
+  font-size: 16px;
+}
+.projects-page .pro-head span,
+.projects-page p {
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.projects-page .team {
+  margin: 30px 0 15px;
+}
+.projects-page .team img {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.projects-page .team img:not(:first-child) {
+  margin-left: -20px;
+}
+.projects-page .do {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+.projects-page .do span {
+  padding: 4px 10px;
+  background-color: #eee;
+  border-radius: 6px;
+  margin: 5px;
+  font-size: 14px;
+}
+.projects-page .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+.projects-page .info .progress {
+  background-color: #eee;
+  border-radius: 6px;
+  position: relative;
+  width: 250px;
+  height: 8px;
+}
+.projects-page .info .progress span {
+  position: absolute;
+  height: 100%;
+  border-radius: 6px;
+  background-color: var(--blue-color);
+}
+.projects-page .info .progress.red span {
+  background-color: var(--red-color);
+}
+.projects-page .info .progress.green span {
+  background-color: var(--green-color);
+}
+.projects-page .info .progress.orange span {
+  background-color: var(--orange-color);
+}
+.projects-page .info .progress.blue span {
+  background-color: var(--blue-color);
+}
+.projects-page .info .icon {
+  color: var(--grey-color);
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .projects-page .info .icon {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+/* ===== Projects Page ===== */

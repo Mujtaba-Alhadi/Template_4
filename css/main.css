@@ -1706,4 +1706,60 @@ aside ul li a span {
   }
 }
 
-/* ===== Projects Page ===== */
+/* ===== Courses Page ===== */
+.courses-page {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.courses-page .course {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.courses-page .course .cover {
+  width: 100%;
+}
+.courses-page .course .instructor {
+  width: 64px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.courses-page .course .info {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.courses-page .course .info h2 {
+  margin: 0;
+  font-size: 16px;
+}
+.courses-page .course .info p {
+  line-height: 1.6;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.courses-page .course a {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blue-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.courses-page .course .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 14px;
+  color: var(--grey-color);
+}

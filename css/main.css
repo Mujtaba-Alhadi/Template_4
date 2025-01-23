@@ -186,11 +186,11 @@ aside ul li a span {
 .content {
   width: 100%;
   margin-left: 200px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .content {
     margin-left: 62px;
-    overflow: hidden;
   }
 }
 /* Head */
@@ -1880,12 +1880,6 @@ aside ul li a span {
   min-width: 250px;
   background-color: white;
   border-radius: 10px;
-}
-@media (min-width: 768px) {
-  .files-page .files-stat {
-    position: sticky;
-    top: 20px;
-  }
 }
 .files-page .files-stat h2 {
   margin: 0;

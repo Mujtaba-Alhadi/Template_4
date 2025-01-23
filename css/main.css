@@ -1988,3 +1988,96 @@ aside ul li a span {
   font-size: 13px;
   border-top: 1px solid #eee;
 }
+
+/* ===== Plans Page ===== */
+.plans-page {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .plans-page {
+    margin: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.plans-page .plan {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.plans-page .plan .top {
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  outline: 3px solid var(--blue-color);
+  text-align: center;
+  padding: 20px;
+}
+.plans-page .plan.blue .top {
+  background-color: var(--blue-color);
+  outline-color: var(--blue-color);
+}
+.plans-page .plan.green .top {
+  background-color: var(--green-color);
+  outline-color: var(--green-color);
+}
+.plans-page .plan.orange .top {
+  background-color: var(--orange-color);
+  outline-color: var(--orange-color);
+}
+.plans-page .plan .top h2 {
+  margin: 0;
+}
+.plans-page .plan .top .price {
+  position: relative;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+}
+.plans-page .plan .top .price span {
+  position: absolute;
+  font-size: 22px;
+  top: 0;
+  left: -15px;
+}
+.plans-page .plan li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+.plans-page .plan li i:first-child {
+  font-size: 18px;
+  margin-right: 5px;
+  color: var(--red-color);
+}
+.plans-page .plan li i.yes {
+  color: var(--green-color);
+}
+.plans-page .plan li i.help {
+  color: var(--grey-color);
+  margin-left: auto;
+  cursor: pointer;
+}
+.plans-page .plan a {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 6px 30px;
+  color: white;
+  border-radius: 6px;
+}
+.plans-page .plan.blue a {
+  background-color: var(--blue-color);
+}
+.plans-page .plan.green a {
+  background-color: var(--green-color);
+}
+.plans-page .plan p.current-plan {
+  text-align: center;
+  color: var(--grey-color);
+  margin: 0;
+}

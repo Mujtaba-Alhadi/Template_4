@@ -185,12 +185,12 @@ aside ul li a span {
 /* Content */
 .content {
   width: 100%;
-  overflow: hidden;
   margin-left: 200px;
 }
 @media (max-width: 767px) {
   .content {
     margin-left: 62px;
+    overflow: hidden;
   }
 }
 /* Head */
@@ -1713,6 +1713,12 @@ aside ul li a span {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
+@media (max-width: 767px) {
+  .courses-page {
+    margin: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
 .courses-page .course {
   background-color: white;
   border-radius: 10px;
@@ -1770,6 +1776,12 @@ aside ul li a span {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+}
+@media (max-width: 767px) {
+  .friends-page {
+    margin: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 .friends-page .friend {
   padding: 20px;
@@ -1845,4 +1857,134 @@ aside ul li a span {
 }
 .friends-page .friend .info a.red {
   background-color: var(--red-color);
+}
+
+/* ===== Files Page ===== */
+.files-page {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .files-page {
+    margin: 10px;
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+/* Files Statistics */
+.files-page .files-stat {
+  padding: 20px;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .files-page .files-stat {
+    position: sticky;
+    top: 20px;
+  }
+}
+.files-page .files-stat h2 {
+  margin: 0;
+}
+.files-page .files-stat .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 13px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  color: var(--grey-color);
+}
+.files-page .files-stat .card .info {
+  display: flex;
+  align-items: center;
+}
+.files-page .files-stat .card .info i {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.files-page .files-stat .card .info.blue i {
+  background-color: rgb(0 117 255 / 20%);
+  color: var(--blue-color);
+}
+.files-page .files-stat .card .info.green i {
+  background-color: rgb(34 197 94 / 20%);
+  color: var(--green-color);
+}
+.files-page .files-stat .card .info.red i {
+  background-color: rgb(244 67 54 / 20%);
+  color: var(--red-color);
+}
+.files-page .files-stat .card .info.orange i {
+  background-color: rgb(245 158 11 / 20%);
+  color: var(--orange-color);
+}
+.files-page .files-stat .card .info p {
+  margin: 0 0 5px;
+  color: black;
+}
+.files-page .files-stat .upload {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 15px;
+  width: fit-content;
+  background-color: var(--blue-color);
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Files */
+.files-page .files {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.files-page .files .file {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+.files-page .files .file i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--grey-color);
+}
+.files-page .files .file img {
+  display: block;
+  width: 64px;
+  margin: 15px auto;
+}
+.files-page .files .file h2 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+.files-page .files .file p {
+  font-size: 13px;
+  color: var(--grey-color);
+}
+.files-page .files .file .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: var(--grey-color);
+  font-size: 13px;
+  border-top: 1px solid #eee;
 }
